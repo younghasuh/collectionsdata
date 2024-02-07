@@ -208,28 +208,20 @@ server <- function(input, output, session) {
   })  
   
   # boxplot with weights split by sex
-  output$wtPlot <- renderPlot({
-    selected() %>% 
-      ggplot(aes(x=sex, y=wt)) +
-      stat_boxplot(geom="errorbar", position="dodge2") +
-      geom_boxplot(stat = "boxplot",
-                   position = "dodge2") + 
-      geom_point(shape=16, alpha=0.4, position=position_jitter(0.2)) +
-      theme_minimal() +
-      scale_x_discrete(limits = c("M", "F", "U"), labels = c("Male", "Female", "Unknown")) +
-      labs(x = "Sex", y = "Weight (g)")
-  })
-  
   # with ggiraph for interactive plot 
+  
+  # points that will be selected in the interactive plot
   selected_pts <- reactive({
-    input$wtPlot2_selected
+    input$wtPlot_selected
   })
   
+  # hovered points 
   output$console <- renderPrint({
-    input$wtPlot2_hovered
+    input$wtPlot_hovered
   })
   
-  output$wtPlot2 <- renderGirafe({
+  # interactive plot
+  output$wtPlot <- renderGirafe({
     gg_bx <- ggplot(selected(), aes(x=sex, y=wt)) +
       stat_boxplot(geom="errorbar", position="dodge2") +
       geom_boxplot(stat="boxplot", position="dodge2", outlier.shape = NA) +
@@ -240,8 +232,8 @@ server <- function(input, output, session) {
     girafe(ggobj = gg_bx)
   })
   
+  # table of all the selected points from the interactive plot
   output$datatab <- renderTable({
-    #  selected_pts() 
     out <- selected()[selected()$lacm %in% selected_pts(),] %>% 
       mutate(LACM = lacm, LAF = laf, Sex = sex, subspecies = spp, Date = datecoll, Locality = locality, SpecType = nat) %>% 
       select(LACM, LAF, Sex, subspecies, Date, Locality, SpecType) 
@@ -249,7 +241,6 @@ server <- function(input, output, session) {
     row.names(out) <- NULL
     out
   })
-  
   
   
   # Table for specimen count by year
