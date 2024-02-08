@@ -6,3 +6,12 @@ This [shiny](https://shiny.posit.co/) application provides a quick visualized su
 
 
 ![app_preview](https://github.com/younghasuh/collectionsdata/assets/22403928/3667a03b-a543-4a05-aa96-7649bd71306f)
+
+
+## App overview
+
+
+## Running the app in R Studio
+
+
+## Publishing the app 
