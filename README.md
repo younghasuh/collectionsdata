@@ -15,3 +15,5 @@ This [shiny](https://shiny.posit.co/) application provides a quick visualized su
 
 
 ## Publishing the app 
+If you want your app to be available on the web, you will need to deploy it on your server or on a hosting service. The LACM app is hosted through shinyapps.io and instructions can be found [here](https://shiny.posit.co/r/articles/share/shinyapps/). Note that in order to use shinyapps.io, you need to split the `app.R` file into two: `UI.R` and `server.R`. This repo contains both for reference. 
+More information on deployment be found [here](https://shiny.posit.co/r/deploy.html).
