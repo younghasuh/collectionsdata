@@ -36,11 +36,12 @@ Simple box plots of each specimen’s weight based on sex (male, female, unknown
 8. **Detailed counts by year**
 Last is a long table including the counts of specimens by year and counts by year and type. 
 
-
-![app_preview2](https://github.com/younghasuh/collectionsdata/assets/22403928/cbfc9ef7-519a-46ed-a4bd-2731aea3cd74)
+<br>
 
 ## LACM lookup
 For looking up specimens based on LACM number. It will provide information on species, collection date, collector, and locality. There are a few instances where you will enter a number but have no results; this is likely that there is missing information on the specimen. This is a feature that will be fixed in the next update. 
+
+![app_preview2](https://github.com/younghasuh/collectionsdata/assets/22403928/cbfc9ef7-519a-46ed-a4bd-2731aea3cd74)
 
 
 ## Running the app in R Studio
