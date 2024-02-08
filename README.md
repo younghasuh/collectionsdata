@@ -45,6 +45,12 @@ For looking up specimens based on LACM number. It will provide information on sp
 
 
 ## Running the app in R Studio
+Shiny is an R package that makes it easy to build interactive web applications straight from R. You can install the package in R:
+`install.packages("shiny")`
+
+[Here](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html) are instructions to get started. 
+
+You can either download the `app.R` posted in this repo or fork it in your own repository to make changes. 
 
 
 ## Publishing the app 
