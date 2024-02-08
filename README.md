@@ -50,7 +50,7 @@ Shiny is an R package that makes it easy to build interactive web applications s
 
 [Here](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html) are instructions to get started. 
 
-You can either download the `app.R` posted in this repo or fork it in your own repository to make changes. 
+You can either download the `app.R` posted in this repo or [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks) it in your own repository to make changes. 
 
 
 ## Publishing the app 
