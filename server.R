@@ -16,11 +16,11 @@ library(DT)
 
 
 # Load data
-data <- read.csv("data_20240328.csv")
+data <- read.csv("data_2023.csv")
 alist <- sort(unique(unlist(data$species, use.names = FALSE)))
-ind <- c("sex", "spp", "state", "month")
 
 
+# run App
 shinyServer(function(input, output, session) {
   
   ### TAB 1
